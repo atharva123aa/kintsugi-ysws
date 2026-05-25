@@ -4,7 +4,7 @@
         position:fixed;
         top:0; left:0; right: 0;
         bottom:0 ;  z-index:0; pointer-events:none;
-    background-image: repeating-linear-gradient(transparent 0
+    background-image: repeating-linear-gradient(transparent 0,
     transparent 30px, rgba(200,160,60,.35) 30px, rgba(200,160,60,.35) 31px) ; background-position:0 51px;}
     /*TODO:ADD SOME POP UP CHARACTERS */
     .nb::after{CONTENT:'';
@@ -18,7 +18,7 @@
         inset:0 auto 0 0;
         width:72px;
         z-index:20;
-        pointer-events: stroke;
+        pointer-events: none;
     background:#a28140; border-right:1px solid #b48c28;;}
 .flag{position:fixed;
     top:0;
@@ -30,31 +30,32 @@
     width:auto;}
     .scrawl{position:fixed;
         z-index:5;
-        pointer-events:nonw;
+        pointer-events:none;
     
-        font-family: 'caveat' cursive; color:
+        font-family: 'caveat' , cursive; color:
      rgba(88,56,10,.3);
 
 
     }
      /*coffee ring
      */
-    .coffe{
+    .coffee{
          position:fixed;
      bottom:14.5%;
      right:4.6%; width:90px; height:73px;
      border-radius: 50%; 
      border:2px solid rgba(148,100,31,.18); transform:rotate(-12deg) scaleX(1.18);
      z-index:3;
-     pointer-events:none;} .doodle {position:fixed; z-index:4;
-        width:100% ;
+     pointer-events:none;} .doodle {position:fixed; z-index:4; pointer-events: none;  opacity:.17;}
+       .page {position:relative; z-index:10;
+         width:100% ;
         min-height:99vh; padding:6vh 5vw 8vh 5.8rem; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto auto;  
     
     gap:2.2rem 4vw; align-items:start;}
 /* sticky note*/ /*todo:add some more note*/ .sticky { grid-column:1; grid-row:1;  
     justify-self:start; align-self: end; 
      position:relative; max-width:  194px;   
-     padding: .7rem 1rem .85rem;
+     padding: .7rem 1rem .84rem;
      background:rgba(255,238,100,.86);   
                                            border:1px solid #c8aa1e;
 color:#5a3e0a; font-size: 1rem; line-height:1.45; transform:rotate(1.9deg); box-shadow:
@@ -69,17 +70,17 @@ justify-self:center; position:relative;
 width:100%;
 max-width: 653px;
 /*this over clamp*/
- margin: .46rem,0;}
+ margin: .46rem 0;}
  .tape { 
     position:absolute;
     z-index:2;
-    pointer-events: none; height:18px; background:rgba(255,2445,150,.54);
+    pointer-events: none; height:18px; background:rgba(255,244,150,.54);
 
     border:1px solid #d2b432;}
     .sticker-wrap{display:block; width:100%;
         transform:rotate(-1.4deg);
         filter:drop-shadow(3px  6px 0 rgba(26,18,9,.2)); transition:
-                transform .25s ease. filter .2s;
+                transform .25s ease, filter .2s;
                  } .sticker-wrap:hover{ transform: rotate(-0.3deg) scale(1.017)
                 translateY(-3PX) ;FILTER:DROP-SHADOW(5PX 8PX 1PX RGBA(27,28,0,.25));} .sticker-wrap svg{
                     width:100%; height:auto; display:block;
@@ -90,12 +91,13 @@ padding: 0.8rem;
 transform:rotate(.4deg);}
 .caption-main{font-size:clamp(1.2rem,2.5vw,1.7rem); font-weight:695;
     color:#6b4a10;  
-    line-height:1.3;}
+    line-height:1.3;} .caption-main em{
+        color:#c49a08; }
     .caption-sub{ margin-top:.3rem; font-size:1rem;
         color:#9a7829;  }
         .squiggle {display:block; 
             margin-top:0.5rem  ;
-            content:""
+            content:"";
             clear : both; 
         }
 .ps-note{ 
@@ -120,4 +122,4 @@ transform:rotate(.4deg);}
     @media  (max-width:600px ){ .page{grid-template-columns:1fr; padding:5vh 1.15rem 7vh 
         5rem;
         
-    } .sticker-zone{width:calc(100vw -6rem); grid-column:1 ;} .corner-note {grid-column:1; justify-self:start; text-align:center;}}
+    } .sticker-zone{width:calc(100vw -6rem); grid-column:1 ;} .corner-note {grid-column:1; justify-self:start; text-align:left;}}
