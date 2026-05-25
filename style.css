@@ -1,0 +1,71 @@
+* {box-sizing: border-box; margin: 0; PADDING:0;} body  { font-family:'caveat',  cursive;
+    background:#fdf0c2; min-height:102vh; overflow-x:hidden;}
+    .nb{
+        position:fixed;
+        top:0; left:0; right: 0;
+        bottom:0 ;  z-index:0; pointer-events:none;
+    background-image: repeating-linear-gradient(transparent 0
+    transparent 30px, rgba(200,160,60,.35) 30px, rgba(200,160,60,.35) 31px) ; background-position:0 51px;}
+    /*TODO:ADD SOME POP UP CHARACTERS */
+    .nb::after{CONTENT:'';
+        position:ABSOLUTE; TOP:0;
+        BOTTOM:0;
+        LEFT:76PX;
+    WIDTH:3PX; BACKGROUND:#D23C3C;  }
+    /*LEFT STR.*/
+    .BINDING{
+        position:fixed;
+        inset:0 auto 0 0;
+        width:72px;
+        z-index:20;
+        pointer-events: stroke;
+    background:#a28140; border-right:1px solid #b48c28;;}
+.flag{position:fixed;
+    top:0;
+    left:0;
+    z-index:201;
+    line-height:0;
+} .flag img{ display:block ; 
+    height:68px;
+    width:auto;}
+    .scrawl{position:fixed;
+        z-index:5;
+        pointer-events:nonw;
+    
+        font-family: 'caveat' cursive; color:
+     rgba(88,56,10,.3);
+
+
+    }
+     /*coffee ring
+     */
+    .coffe{
+         position:fixed;
+     bottom:14.5%;
+     right:4.6%; width:90px; height:73px;
+     border-radius: 50%; 
+     border:2px solid rgba(148,100,31,.18); transform:rotate(-12deg) scaleX(1.18);
+     z-index:3;
+     pointer-events:none;} .doodle {position:fixed; z-index:4;
+        width:100% ;
+        min-height:99vh; padding:6vh 5vw 8vh 5.8rem; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto auto;  
+    
+    gap:2.2rem 4vw; align-items:start;}
+/* sticky note*/ /*todo:add some more note*/ .sticky { grid-column:1; grid-row:1;  
+    justify-self:start; align-self: end; 
+     position:relative; max-width:  194px;   
+     padding: .7rem 1rem .85rem;
+     background:rgba(255,238,100,.86);   
+                                           border:1px solid #c8aa1e;
+color:#5a3e0a; font-size: 1rem; line-height:1.45; transform:rotate(1.9deg); box-shadow:
+3px 4px 10px rgba(0,0,0,.1); margin-top:2.8vh;}
+ .sticky::before{content:''; position:absolute ;
+    top:-7px; left:51%; transform:translateX(-50%) rotate(-2deg); width:40px;
+
+height:17px; background:  rgba(255,240,120,.65); border:1px solid #c8aa1e;} 
+.sticker-zone{
+    grid-column:1/-1; grid-row:2;
+justify-self:center; position:relative; 
+width:min(61vw,661px);
+/*this over clamp*/
+ margin: .46rem,0;}
