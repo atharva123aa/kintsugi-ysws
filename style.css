@@ -1,152 +1,109 @@
-* {box-sizing: border-box; margin: 0; PADDING:0;} body  { font-family:'caveat',  cursive;
-    background:#fdf0c2; min-height:102vh; overflow-x:hidden;}
-    .nb{
-        position:fixed;
-        top:0; left:0; right: 0;
-        bottom:0 ;  z-index:0; pointer-events:none;
-    background-image: repeating-linear-gradient(transparent 0,
-    transparent 30px, rgba(200,160,60,.35) 30px, rgba(200,160,60,.35) 31px) ; background-position:0 51px;}
-    /*TODO:ADD SOME POP UP CHARACTERS */
-    .nb::after{CONTENT:'';
-        position:ABSOLUTE; TOP:0;
-        BOTTOM:0;
-        LEFT:76PX;
-    WIDTH:3PX; BACKGROUND:#D23C3C;  }
-    /*LEFT STR.*/
-    .BINDING{
-        position:fixed;
-        inset:0 auto 0 0;
-        width:72px;
-        z-index:20;
-        pointer-events: none;
-    background:#a28140; border-right:1px solid #b48c28;;}
-.flag{position:fixed;
-    top:0;
-    left:0;
-    z-index:201;
-    line-height:0;
-} .flag img{ display:block ; 
-    height:68px;
-    width:auto;}
-    .scrawl{position:fixed;
-        z-index:5;
-        pointer-events:none;
+<html>
+<head><meta charset="UTF-8">
+    <META NAME="viewport" content="width=device-width,initial-scale =1.0">
+        <title>Kintsugi-YSWS
+        </title>
     
-        font-family: 'caveat' , cursive; color:
-     rgba(88,56,10,.3);
+    <LINK HREF="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Rubik+Wet+Paint&display=swap"rel="Stylesheet">
+        <LINK rel="Stylesheet" href="style.css"></head>
+    <body> <div class="nb"></div>
+        <div class="BINDING"></DIV> <DIV CLASS="coffee"></div> 
+            <!--scribble-->
+        <span class="scrawl" style="top:14% ; left:78px; font-size:1rem; transform:rotate(-2deg);">FIX IT
+        </span>
+        <span class="scrawl" style="top:29%; left:76px ; font-size:0.9rem;transform:rotate(1deg);" > SHIP IT</span> 
+        <span class="scrawl"  style="top:54%;  left:78px; font-size:0.82rem;transform:rotate(-1.5deg);">open src</span> 
+        <span class="scrawl" style="top:72% ; left:76px;font-size:0.9rem; transform:rotate(1.5deg);">>金継ぎ</span> 
+        <span class="scrawl" style="top: 86%;   left:78px;font-size:0.8rem;transform:rotate(-1deg) ;">★ hc </span> 
+        <!--doodle-->
+        <svg class="doodle" style="top:16%; right: 4%;width:34px;  height:34px;" viewBox="0 0 40  40">
+            <path d="M20  4l3.5 10.5H34l-8.5 6.2 3.2 10.3L20 25.5l-8.7 5.5 3.2-10.3L6 14.5h10.5z"  fill="none" stroke="#a07010" stroke-width="1.8"/></svg>
+            <svg  class="doodle" style="top:46%"; right:5%; width:37px; height:25px; transform:rotate(12deg);" viewBox="0 0 40 25">
+                <path d="M4 13 Q18 5 34 13 M28 7 L34 13 L28 19" FILL="NONE" stroke="#7A5010" STROKE-WIDTH="2"
+                STROKE-LINECAP="ROUND" STROKE-LINEJOIN="ROUND"
+                />  </SVG>
+                    <SVG CLASS="DOODLE" STYLE="BOTTOM:22% ;LEFT:81PX; WIDTH:20PX; HEIGHT:20PX; "viewBox="0  0 24 24">
+                          <path d="M12 20C12 20 3 13.5 3 8A4.5  4.5 0 019-1 4.5 4.5 0 019 1c0  5.5-9  12-9 12z"fill="none" stroke="#b03030" stroke-width="1.8"/></svg>
+                          <a href="https://hackclub.com/" target="_blank" rel="noopener noreferrer"class="flag" aria-label="Hack club"> <img src="flag-orpheus-top.svg" alt="Hack Club Orpheus flag"></a>
+                          <div class="page"> <div class="sticky"> 
+                            HACK CLUB<BR>
+                                <EM STYLE="FONT-SIZE:1.1REM;">YSWS Thing</em><br>
+                                    <span style="font-size:0.85rem; opacity:0.7; ">Just ship it</span></div>
+                <div class="sticker-zone">
+        <div class="tape"style="width:67px; top:-9px; left:21%; transform:rotate(-4deg);"></div> <div class="tape" style="width:52px; bottom:-7px; right:18%; transform:rotate(3deg);"></div>
+    <div class="sticker-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 218">
+<rect x="6" y="6" width="488" height="206" rx="34" fill="#e8b84b" stroke="#1a1209" stroke-width="3"/><rect x="16" y="16" width="468" height="186"rx="26" fill="#fff9e8" stroke="#1a1209" stroke-width="1.5"/> 
+<line x1="30" y1="50" x2="470" y2="50" stroke="rgba(200,170,80,0.1)" stroke-width="1"/>
+<line x1="30"y1="80" x2="470" y2="80" stroke="#c8aa501a" stroke-width="1"/>
+<g fill="#fffef8"stroke="#1a1209" stroke-width="2" stroke-linejoin="round">
+    <rect x="38" y="42" width="92" height="72" rx="3" transform="rotate(-7 84 78)"/>
+<rect x="78" y="28" width="104" height="57" rx="3"
+transform="rotate(5 130 57)"/>
+<rect x="168" y="36" width="87" height="64"  rx="3" transform="rotate(-4 212 68)"/><rect x="248" y="22" width="118" height="76"  rx="3"transform="rotate(6 307 60)"/>
+
+<rect x="338" y="40" width="95" height="67"rx="3" transform="rotate(-5 386 74)"/>
+<rect x="118" y="88" width="128" height="78"      rx="3" transform="rotate(3 182 127)" />
+<rect x="268" 
+y="96"
+width="99" height="62"rx="3"transform="rotate(-3 318 127)"/>
+</g><!--gold cracks for referencing kinstsugi-->
+<g fill="none" stroke="#d4a017" stroke-width="1.8" stroke-linecap="round" opacity="0.64">
+    <path d="M60 55 Q70 48 78 60 Q85 68 95 62"/>
+<PATH D="M310 34 Q318 27 326 37 Q332 45 340 40"/>
+<PATH D="M155 100 Q162 92 170 104 Q176 112 185 108 "/></G>
+<G STROKE-LINECAP="ROUND" STROKE-LINEJOIN="ROUND"><G TRANSForM="
+    TRANSLATE(52,58) ROTATE(-7)">
+    <PATH D="M12 8l4-10 4 10-10-6h12z"  fill="#c9a227" stroke="#1a1209" stroke-width="1.2"/><!--TODO add a pot which goes away when you click--></G>
+    <G TRANSFORM="translate(118,40) rotate(5) "fill="none">
+        <path d="M20 48c-8-12 8-22 18-10c6 8 2 18-8 14" stroke="#1a1209" stroke-width="2.2"/>
+    </g>
+    <g transform="translate(148,108) rotate(3)">
+      <path  d="M40 28L52 8L64 28L84 20L68 40L72 62L52 50L32  62L36 40L20 20Z" FILL="#D4A017" STROKE="#1A1209"STROKE-WIDTH="1.5" OPACITY="0.93 "/>
+    </G><G TRANSFORM="TRANSLATE(430,32) ROTATE(9)"><path d="M0-8L2-2L8-2L3 2L5 8L0 4L-5 8L-3 2L-8-2L-2-2Z" FILL="#E8B84B"STROKE-WIDTH="1" /></G>
+<G FOnt-family=" 'Rubik Wet Paint',fantasy" font-size="56" text-anchor="middle" letter-spacing="2">
+
+<text x="252" y="158" fill="#1a1209" transform="translate(4,3)">KINTSUGI</TEXT>
+<text x="252" y="158"fill="#f0c14d"  STROKE="#1A1209" STROKE-WIDTH="0.55">KINTSUGI</TEXT></G>
+        </G>   <text x="252" y="182" FONT-FAMILY="Caveat,cursive" font-size="13" fill="#9a7828
+    " text-anchor="middle" opacity="0.65">
+    金継ぎ — break it. fix it. ship it.</text>
+    </svg></div>
+   <div class ="how-section">
+   <div class="how-heading"> How <U>KINTSUGI</U>Works?
+    <SPAN CLASS="how-sub">Break it. Fix it. Ship it.</span></div>
+        <div class="how-grid">
+            <div class="how-card">
+        <SVG class="crack-svg" viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg"><path d="M30 40 Q45 55 38 80 Q32 100 50 130"FILL="none" stroke="#c9a030"
+            stroke-width="1.3" opacity="0.22"stroke-linecap="round"/></svg>><div class="how-card-title">&#9998; 1.Find It</div> 
+             <div class="how-card-body">Hunt Broken things-bugs,ugly UX, Missing Features.Log you hours as you fix. Every <U>SHIP</U> Counts.
+             </div> <span class="how-badge">bugs + issues </span></div> <div class="how-card">
+<svg class="crack-svg" viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg">
+     <path d="M120 30 Q105 50 115 75 Q122 95 108  125" FILL="NONE " STROKE="#C9A030" STROKE-WIDTH="1.4" OPACITY="0.22" stroke-linecap="round"/></svg><DIV CLASS="how-card-title">&#10000; 2.Fix it</div><div class="how-card-body">Patch up them<b> Beautifully</b>. Make it better than it was ever that's the <I>KINTSUGI</I>     way, One ship= 1 Pot Fix.</div>
+<span class="how-badge"> Code+hours+commits</span>
+     </div><div class="how-card"> <svg class="crack-svg"viewBox="0 0 160 24"  xmlns="http://www.w3.org/2000/svg"> 
+        <path d="M80 20 Q95 45 85 72 Q77 92 92 118"
+        FILL="NONE" STROKE="#C9A030"
+        STROKE-WIDTH="1.4" Opacity="0.22" stroke-linecap="round"/></svg><div class="how-card-title">
+            &#8679; 3.Ship it </div> <div class="how-card-body">Ship your fix,Submit hours. We verify and count your pots.No AI slop.</div>
+            <span class="how-badge">Code+Submit</span></div><!--todo some guides by hc-->  <div class="how-card">
+<svg class="crack-svg" viewBox="0 0 160 240"
+xmlns="http://www.w3.org/2000/svg"><path D="M50 25 Q65 48 55 74 Q47 94 63 120"fill="none" stroke="#c9a030" stroke-width="1.4" opacity="0.22" stroke-linecap="round"/></svg>
+<DIV CLASS="how-card-title">&#9733; 4.GRIND & EARN</DIV><div class="how-card-body">
+    Stack different pots,Unlock your prize according to your tier,Show off your work.The more you fix, the more rewards you earn. 金継ぎ forever.</div> <span class="how-badge">
+      <B> POTS AND PRIZES</B></SPAN></DIV></div></DIV>  
+</div>
+<div class="caption-block">  
+<p class="caption-main">Find broken things!<em>Fix them beautifully and get rewards.</em></p>
+<p class="caption-sub">-A HACK CLUB YSWS-</P>
+    <SVG CLASS="squiggle" viewBox="0 0 240 14" width="220" xmlns="http://www.w3.org/2000/svg"><path 
+        d="M4 7 Q18 2 32 7 Q46 12 60 7 Q74 2 88 7 Q102 12 116  7 Q130 2 144 7 Q158 12 172 7 Q186 2 200 7 Q214 12 228 7" fill="none" stroke="#c9a030" stroke-width="2.2 " stroke-linecap="round" opacity="0.65"
+        /> </SVG>
+        <span class="ps-note">p.s. The pottery depends on your code</span>
+    </div> <div class="corner-note">
+        ONE HOUR OF SHIPPED PROJECT<BR>=ONE POT <BR>
+            <SPAN STYLE="font-size:0.78rem; opacity:0.55;">© 2026 Hack Club</span></div></div></body></html>
 
 
-    }
-     /*coffee ring
-     */
-    .coffee{
-         position:fixed;
-     bottom:14.5%;
-     right:4.6%; width:90px; height:73px;
-     border-radius: 50%; 
-     border:2px solid rgba(148,100,31,.18); transform:rotate(-12deg) scaleX(1.18);
-     z-index:3;
-     pointer-events:none;} .doodle {position:fixed; z-index:4; pointer-events: none;  opacity:.17;}
-       .page {position:relative; z-index:10;
-         width:100% ;
-        min-height:99vh; padding:6vh 5vw 8vh 5.8rem; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto auto;  
     
-    gap:2.2rem 4vw; align-items:start;}
-/* sticky note*/ /*todo:add some more note*/ .sticky { grid-column:1; grid-row:1;  
-    justify-self:start; align-self: end; 
-     position:relative; max-width:  194px;   
-     padding: .7rem 1rem .84rem;
-     background:rgba(255,238,100,.86);   
-                                           border:1px solid #c8aa1e;
-color:#5a3e0a; font-size: 1rem; line-height:1.45; transform:rotate(1.9deg); box-shadow:
-3px 4px 10px rgba(0,0,0,.1); margin-top:2.8vh;}
- .sticky::before{content:''; position:absolute ;
-    top:-7px; left:51%; transform:translateX(-50%) rotate(-2deg); width:40px;
 
-height:17px; background:  rgba(255,240,120,.65); border:1px solid #c8aa1e;} 
-.sticker-zone{
-    grid-column:1/-1; grid-row:2;
-justify-self:center; position:relative; 
-width:100%;
-max-width: 653px;
-/*this over clamp*/
- margin: .46rem 0;}
- .tape { 
-    position:absolute;
-    z-index:2;
-    pointer-events: none; height:18px; background:rgba(255,244,150,.54);
-
-    border:1px solid #d2b432;}
-    .sticker-wrap{display:block; width:100%;
-        transform:rotate(-1.4deg);
-        filter:drop-shadow(3px  6px 0 rgba(26,18,9,.2)); transition:
-                transform .25s ease, filter .2s;
-                 } .sticker-wrap:hover{ transform: rotate(-0.3deg) scale(1.017)
-                translateY(-3PX) ;FILTER:DROP-SHADOW(5PX 8PX 1PX RGBA(27,28,0,.25));} .sticker-wrap svg{
-                    width:100%; height:auto; display:block;
-                } 
-                 .caption-block{ grid-column:1;
-grid-row:3;
-padding: 0.8rem;
-transform:rotate(.4deg);}
-.caption-main{font-size:clamp(1.2rem,2.5vw,1.7rem); font-weight:695;
-    color:#6b4a10;  
-    line-height:1.3;} .caption-main em{
-        color:#c49a08; }
-    .caption-sub{ margin-top:.3rem; font-size:1rem;
-        color:#9a7829;  }
-        .squiggle {display:block; 
-            margin-top:0.5rem  ;
-            content:"";
-            clear : both; 
-        }
-.ps-note{ 
-          display:block;
-          margin-top:.8rem; 
-           font-size:.85rem;
-           font-style:italic;
-        color:rgba(120,86,15,.4) ;}
-        /*scribble*/
-    .corner-note  {
-                   grid-column:2;
-                grid-row:3;
-                justify-self:end;
-               align-self:end; 
-               padding:.8rem ;
-                text-align:right; line-height:1.4; font-style:ITALIC; FONT-SIZE:  .93REM; COLOR:RGBA(90,60,10,.3);
-                TRANSFORM:ROTATE(-1.3DEG); 
-                
-                
-    } 
-
-    @media  (max-width:600px ){ .page{grid-template-columns:1fr; padding:5vh 1.15rem 7vh 
-        5rem;
-        
-    } .sticker-zone{width:calc(100vw -6rem); grid-column:1 ;} .corner-note {grid-column:1; justify-self:start; text-align:left;}}
-.how-section{ grid-column:1/-1;
-    grid-row:3;
-    padding:.4rem 0 .6rem;} .how-heading {font-family:'Caveat',cursive; font-size:clamp(1.5rem,3vw,2rem);
-        font-weight:698; color:#3d2a00; align-items:center; margin-bottom:.2rem; display:flex; flex-direction :column;
-        align-items:center; gap:.2rem;} 
-        .how-sub{font-size:.95rem;color:rgba(90,62,10,.45); font-style:italic; font-weight:400; 
-        }
-
-        .how-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(148px,1fr)); gap:1.1rem;
-            margin-top:1.2rem;} .how-card{
-                background:#2a1a08; border:2px dashed #c9a030;/*todo:add beter rms and vws for better mobile response and improve grid by changing layouts using fr*/
-border-radius:21px; padding:1.2rem 1rem 1rem;color:#f5e4b0; position:relative;
-overflow:hidden;
-display:flex; flex-direction:column; gap:  .5rem; transition:transform .22s ease,box-shadow .22s ease;}
- .how-card:hover{transform:translateY(-4PX) ROTATE(.4DEG); BOX-SHADOW: 0 8PX 0 RGBA(26,18,9,.18);} .crack-svg{
-    position:absolute; inset:0; width:100%;height:100%;pointer-events:none;}
-    .how-card-title{font-family:'Caveat',cursive;
-        font-size:1.18rem; font-weight:698;  color:#f5e4b0; 
-        position:relative;z-index:  1;}.how-card-body{font-family:'Caveat',cursive;font-size:.95rem;
-            color:#f5e4b0;
-            line-height:1.45; flex:1; position:relative; z-indeX:1;
-        }
-        .how-badge{display:inline-block; background:#3d2A08; 
-            border:1px solid #8a6a18; color:#c9a030;   font-family:'Caveat',cursive;
-            font-size:.8REM; PADDING:3PX 10PX;BORDER-RADIUS: 20PX; ALIGN-SELF : FLEX-START; 
-            POSITION:RELATIVE; Z-INDEX:1  ;}@media(
-                max-width:600px){.how-grid{grid-template-columns:1fr 1fr ;}}
+ 
