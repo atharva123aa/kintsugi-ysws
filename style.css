@@ -1,4 +1,4 @@
-* {box-sizing: border-box; margin: 0; PADDING:0;} body  { font-family:'caveat',  cursive;
+*{box-sizing: border-box; margin: 0; PADDING:0;} html{scroll-behavior:smooth;} body  { font-family:'caveat',  cursive;
     background:#fdf0c2; min-height:102vh; overflow-x:hidden;}
     .nb{
         position:fixed;
@@ -49,7 +49,7 @@
      pointer-events:none;} .doodle {position:fixed; z-index:4; pointer-events: none;  opacity:.17;}
        .page {position:relative; z-index:10;
          width:100% ;
-        min-height:99vh; padding:6vh 5vw 8vh 5.8rem; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto auto auto auto;  
+        min-height:99vh; padding:6vh 5vw 8vh 5.8rem; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto auto  auto auto;  
     
     gap:2.2rem 4vw; align-items:start;}
 /* sticky note*/ /*todo:add some more note*/ .sticky { grid-column:1; grid-row:1;  
@@ -109,7 +109,7 @@ transform:rotate(.4deg);}
         /*scribble*/
     .corner-note  {
                    grid-column:2;
-                grid-row:5;
+                grid-row:4;
                 justify-self:end;
                align-self:end; 
                padding:.8rem ;
@@ -122,7 +122,8 @@ transform:rotate(.4deg);}
     @media  (max-width:600px ){ .page{grid-template-columns:1fr; padding:5vh 1.15rem 7vh 
         5rem;
         
-    } .sticker-zone{width:calc(100vw -6rem); grid-column:1 ;} .corner-note {grid-column:1; justify-self:start; text-align:left;}}
+    } .sticker-zone{width:calc(100vw - 6rem); grid-column:1 ;} .corner-note {grid-column:1; justify-self:start; text-align:left;} .faq-section{grid-column:1;  grid-row :auto ;justify-self:stretch; max-width: 100%;}
+     .faq-grid{grid-template-columns:1fr;}}
 .how-section{ grid-column:1/-1;
     grid-row:3;
     padding:.4rem 0 .6rem;} .how-heading {font-family:'Caveat',cursive; font-size:clamp(1.5rem,3vw,2rem);
@@ -131,8 +132,8 @@ transform:rotate(.4deg);}
         .how-sub{font-size:.95rem;color:rgba(90,62,10,.45); font-style:italic; font-weight:400; 
         }
 
-        .how-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.1rem;
-            margin-top:1.2rem; align-items:start;} .how-card{
+        .how-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1.1rem;
+            margin-top:1.2rem;width:100%; min-width:0; box-sizing:border-box; } .how-card{
                 background:#2a1a08; border:2px dashed #c9a030;/*todo:add beter rms and vws for better mobile response and improve grid by changing layouts using fr*/
 border-radius:21px; padding:1.2rem 1rem 1rem;color:#f5e4b0; position:relative;
 overflow:hidden;
@@ -179,17 +180,26 @@ display:flex; flex-direction:column; gap:  .5rem; transition:transform .22s ease
     font-family:'Caveat',cursive; font-size:.86rem; color:rgba(90,60,10,.55); 
       background:RGBA(255,242,120,.7); BORDER:1PX SOLID #C8AA1E; 
        PADDING:4Px 10px; border-radius:3px; 
-       transform:rotate(-2deg); animation:floatnote linear infinite;} @keyframes floatnote{ 0%{top:109vh; opacity:0;} 10%{opacity:1;} 90%{opacity:.7%}; 
+       transform:rotate(-2deg); animation:floatnote linear infinite;} @keyframes floatnote{ 0%{top:109vh; opacity:0;} 10%{opacity:1;} 90%{opacity:.7;}; 
        100%{top:-10vh; opacity:0;
        }}
-.faq-section{grid-column:1/-1; grid-row:6; padding:.4rem 0 .6rem;} .faq-heading{
+.faq-section{grid-column:1/-1; grid-row:5; justify-self:stretch;  padding:.4rem 0 .6rem; max-width :100%; max-width:100%; width:100%;} .faq-heading{
     font-family: 'Caveat' , cursive; font-size: clamp(1.5rem, 3vw,2rem); font-weight:698; color:#3d2a06; text-align:center; display:flex; flex-direction:column; align-items:  center;
     gap:.2rem; margin-bottom :.2rem;
 } .faq-sub{
          font-size:.95rem; color:rgba(90,62,10,.45); font-style:italic; 
-         font-weight:399;}  .faq-grid{display:GRID;grid-template-columns:repeat(2,1fr); GAP:1.1REM; MARGIN-TOP:1.2REM; WIDTH:100%;}
+         font-weight:399;}  .faq-grid{display:GRID;grid-template-columns:repeat(2,1fr); GAP:1.1REM; MARGIN-TOP:1.2REM; WIDTH:100%; min-width:0; box-sizing:border-box;}
          .faq-item{background:#2a1a08; border:2px dashed #c9A030; border-radius:19px; padding:1.1rem 1rem; cursor: pointer; display:flex;
-            flex-direction:  column; gap :.4rem; transition:transform .2s ease ;} .faq-item:hover{transform:translateY(-3px) rotate(.3deg);}
-            .faq-pot{width:44px;} .faq-q{ font-family:'Caveat',cursive; font-size  :1.1rem; font-weight:697;color:#f5e4b0;}  .faq-a{font-family:'Caveat',cursive; font-size:.92rem; color:rgba(245,228,176,.72) ; line-height:1.46; max-height: 0;   
+            flex-direction:  column; gap :.4rem; transition:transform .2s ease ; min-width:0; box-sizing:border-box;} .faq-item:hover{transform:translateY(-3px) rotate(.3deg);}
+            .faq-pot{width:44px;} .faq-q{ font-family:'Caveat',cursive; font-size  :1.1rem; font-weight:697;color:#f5e4b0; word-break:break-word; overflow-wrap:anywhere;}  .faq-a{font-family:'Caveat',cursive; font-size:.92rem; color:rgba(245,228,176,.72) ; line-height:1.46; max-height: 0;   
                 overflow:hidden; transition:max-height .4s ease;}
-                .faq-item.open .faq-a{max-height:200px;} @media(max-width:600px){.faq-grid{grid-template-columns:1fr;}}                                          
+                .faq-item.open .faq-a{max-height:200px;} @media(max-width:600px){.faq-grid{grid-template-columns:1fr;}}  .slack-link{color:#d4a017; text-decoration:none; border-bottom:1px dashed #D4a017;}
+                .slack-link:hover{color:#f0c030;}    
+            .faq-sticky{position:relative; max-width:194px; 
+                padding:.7rem 1rem .84rem; background:rgba(255,238,100,.86); border: 1px solid #c8aa1e;
+            color:#5a3e0a; font-size: 1rem; 
+            line-height:1.46; transform:rotate(-1.9deg); box-shadow:3px 4px 10px rgba(0,0,0,.1); cursor:pointer; 
+            transition:transform .2s ease;
+            }
+            .faq-sticky:hover{transform:rotate(-0.5deg) scale(1.03); }
+                 .faq-sticky::before{content:''; position: absolute ; top:-7px; left:51%; transform:translateX(-50%) rotate(2deg); width:40px; height:17px;  background:rgba(255,240,120,.65);  border:1px solid #c8aa1e;}/*TODO:ADd of my final touch and credits with a pottery bg*/                           
