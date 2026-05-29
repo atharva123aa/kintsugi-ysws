@@ -3,15 +3,11 @@
     .nb{
         position:fixed;
         top:0; left:0; right: 0;
-        bottom:0 ;  z-index:0; pointer-events:none;
-    background-image: repeating-linear-gradient(transparent 0,
-    transparent 30px, rgba(200,160,60,.35) 30px, rgba(200,160,60,.35) 31px) ; background-position:0 51px;}
+        bottom:0 ;  z-index:-2; pointer-events:none;
+    background-image: repeating-linear-gradient(transparent 0px,
+    transparent 31px, rgba(200,160,60,.35) 30px, rgba(200,160,60,.35) 31px) ; background-size:100% 32px; background-position:0 0;}
     /*TODO:ADD SOME POP UP CHARACTERS */
-    .nb::after{CONTENT:'';
-        position:ABSOLUTE; TOP:0;
-        BOTTOM:0;
-        LEFT:76PX;
-    WIDTH:3PX; BACKGROUND:#D23C3C;  }
+    .nb::after{display:none;  }
     /*LEFT STR.*/
     .BINDING{
         position:fixed;
@@ -19,7 +15,7 @@
         width:72px;
         z-index:20;
         pointer-events: none;
-    background:#a28140; border-right:1px solid #b48c28;;}
+    background:#a28140; width:12px;}
 .flag{position:fixed;
     top:0;
     left:0;
@@ -183,7 +179,7 @@ display:flex; flex-direction:column; gap:  .5rem; transition:transform .22s ease
        transform:rotate(-2deg); animation:floatnote linear infinite;} @keyframes floatnote{ 0%{top:109vh; opacity:0;} 10%{opacity:1;} 90%{opacity:.7;}; 
        100%{top:-10vh; opacity:0;
        }}
-.faq-section{grid-column:1/-1; grid-row:5; justify-self:stretch;  padding:.4rem 0 .6rem; max-width :100%; max-width:100%; width:100%;} .faq-heading{
+.faq-section{grid-column:1/-1; grid-row:5; justify-self:stretch;  padding:.4rem 0 .6rem; max-width :100%; width:100%; position:relative; z-index:10;} .faq-heading{
     font-family: 'Caveat' , cursive; font-size: clamp(1.5rem, 3vw,2rem); font-weight:698; color:#3d2a06; text-align:center; display:flex; flex-direction:column; align-items:  center;
     gap:.2rem; margin-bottom :.2rem;
 } .faq-sub{
@@ -203,3 +199,12 @@ display:flex; flex-direction:column; gap:  .5rem; transition:transform .22s ease
             }
             .faq-sticky:hover{transform:rotate(-0.5deg) scale(1.03); }
                  .faq-sticky::before{content:''; position: absolute ; top:-7px; left:51%; transform:translateX(-50%) rotate(2deg); width:40px; height:17px;  background:rgba(255,240,120,.65);  border:1px solid #c8aa1e;}/*TODO:ADd of my final touch and credits with a pottery bg*/                           
+                .maker-note{position:Relative;
+                    WIDTH:FIT-CONTENT ;MARGIN :2REM AUTO 3REM; PADDING:1REM 1.4REM 1.1REM;
+                     BACKGROUND:RGBA(255,238,100,.86); 
+                      BORDER:1PX SOLID #C8AA1E; COLOR  :#5A3E0A; 
+                      font-family:'Caveat',cursive; line-height:1.6; transform:rotate(-1.2deg); box-shadow:3px 4px 10px rgba(0,0,0,.1); text-align:center;}
+    .maker-note::before{content:''; position:absolute; top:-7px; left:51%; transform:translateX(-50%) rotate(2deg);width: 44px; height:17px; 
+        background:rgba(255,240,120,.65); border:1px solid #c8aa1e;}
+    .maker-title{ font-size:1.2 ; font-weight:699; color:#5A3E0A; 
+    }.maker-sub{font-size:0.96rem; color:#7a5a10; opacity:0.8;}
