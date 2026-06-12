@@ -1,0 +1,9 @@
+body{font-family: 'Caveat',cursive; background:#fdf0c2; color:#3d2a00; max-width:624px; 
+     margin: 0 auto;padding:40px 24px 79px ; font-size:17px; line-height: 1.67px;} a{
+        color:#c9a030;
+     } h1{ font-size:43px; 
+        margin-bottom: 4px;} h2{ font-size: 26px ;  margin-top :36px; margin-bottom:8px; border-bottom :2px dashed rgba(200,160,60,.4); padding-bottom:4px;} p{margin-bottom: 14px ;} ul{padding-left: 23px;} li {margin-bottom: 6px;}.note { background: rgba(255,238,100,.75); border:1px solid #c8aa1e; padding: 12px 16px; margin:24px 0; font-size:17px;} .muted
+        { 
+            color:rgba(90,60,10,.45); 
+            font-style: italic; font-size: 15px; } footer{margin-top: 62px; font-size: 13px;color: rgba(90,60,10,.35);
+                font-style: italic;}
