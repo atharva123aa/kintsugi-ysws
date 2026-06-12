@@ -11,7 +11,7 @@ document.querySelectorAll('.faq-item' ).forEach(function(item) {
     this.classList.add('clicked') ;
     setTimeout(() =>{
         this.classList.remove('clicked');
-        window.open('https://hackclub.com/','_blank'); 
+        window.open('https://rsvp.hackclub.community/kintsugi','_blank'); 
     },400);
 });
         
