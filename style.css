@@ -215,4 +215,28 @@ display:flex; flex-direction:column; gap:  0.5rem; transition:transform 0.22s ea
         z-index:201; display:block; line-height:0; } .rsvp-btn img{ height:46px; width:auto; 
 display:block; filter:drop-shadow(2px 3px 6px rgba(0,0,0,0.21)); transition :transform 0.2s ease,filter 0.2s ease;
         } .rsvp-btn img:hover { transform:scale(1.06) 
-rotate(-1deg); filter:drop-shadow(3px 5px 10px rgba(0,0,0,0.25));} .rsvp-btn.clicked img{ filter: drop-shadow(0 0 12px rgba(212,160,23 ,0.9)) brightness(1.3); transform:scale(0.96); }
+rotate(-1deg); filter:drop-shadow(3px 5px 10px rgba(0,0,0,0.25));} .rsvp-btn.clicked img{ filter: drop-shadow(0 0 12px rgba(212,160,23 ,0.9)) brightness(1.3); transform:scale(0.96); }.cards {display:flex; justify-content:center; align-items:center; width:100%;padding:1rem  0;} .prize-card
+{ width:14vw;border-radius:18px; 
+    border:3px solid #c9A030;margin-left: 6px;
+    transition:transform 0.2s ease;
+     user-select: none; } .prize-card:first-child {margin-left:0;
+     } 
+
+       .card1{transform:rotate(-10deg)
+        translateY(-15PX); Z-INDEX:1; }
+        .card2 {transform:rotate(4deg)
+            translateY(-15PX); Z-INDEX:2;}
+       .card3{transform:rotate(-4deg)
+        translateY(-15PX); Z-INDEX:3; }
+       .card4 {transform:rotate(5deg)
+        translateY(-15PX); Z-INDEX:2;
+       }
+        .card5 {transform:rotate(-6deg)
+            translateY(-15PX); Z-INDEX:1;} .card1:hover{transform:rotate(-14deg)  translateY(-15PX) SCALE(1.07);Z-INDEX:10;} 
+            .card2:hover{transform:rotate(8deg)  translateY(5PX) SCALE(1.07);Z-INDEX:10;} 
+            .card3:hover{transform:rotate(-7deg)  translateY(-25PX) SCALE(1.07);Z-INDEX:10;} .card4:hover{transform:rotate(9deg)  translateY(9PX) SCALE(1.07);Z-INDEX:10;} .card5:hover{transform:rotate(-10deg)  translateY(-7PX) SCALE(1.07);Z-INDEX:10;}.prize-note{FONT-FAMILY:'Caveat',cursive ; font-size:0.9REM; COLOR:RGBA(90,62,10,0.5); 
+                FONT-STYLE:ITALIC;tExT-ALIGN:CENTER;
+                MARGIN: TOP 1REM
+                ;}
+
+
