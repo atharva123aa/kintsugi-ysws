@@ -5,7 +5,7 @@
         top:0; left:0; right: 0;
         bottom:0 ;  z-index:-2; pointer-events:none;
     background-image: repeating-linear-gradient(transparent 0px,
-    transparent 31px, rgba(200,160,60,.35) 30px, rgba(200,160,60,.35) 31px) ; background-size:100% 32px; background-position:0 0;}
+    transparent 32px, rgba(200,160,60,.35) 30px, rgba(200,160,60,.35) 31px) ; background-size:100% 32px; background-position:0 0;}
     /*TODO:ADD SOME POP UP CHARACTERS */
     .nb::after{display:none;  }
     /*LEFT STR.*/
@@ -236,7 +236,12 @@ rotate(-1deg); filter:drop-shadow(3px 5px 10px rgba(0,0,0,0.25));} .rsvp-btn.cli
             .card2:hover{transform:rotate(8deg)  translateY(5PX) SCALE(1.07);Z-INDEX:10;} 
             .card3:hover{transform:rotate(-7deg)  translateY(-25PX) SCALE(1.07);Z-INDEX:10;} .card4:hover{transform:rotate(9deg)  translateY(9PX) SCALE(1.07);Z-INDEX:10;} .card5:hover{transform:rotate(-10deg)  translateY(-7PX) SCALE(1.07);Z-INDEX:10;}.prize-note{FONT-FAMILY:'Caveat',cursive ; font-size:0.9REM; COLOR:RGBA(90,62,10,0.5); 
                 FONT-STYLE:ITALIC;tExT-ALIGN:CENTER;
-                MARGIN: TOP 1REM
+                MARGIN-TOP: 1REM
                 ;}
-
-
+             .guide-btn {  display:inline-block;margin-top: 0.7rem;; 
+                 ; 
+        font-family:'Caveat', cursive; 
+        font-size:1rem; font-weight:702; color:#3d2a00; background:#c9a030; border:2px solid #1e1209; 
+         border-radius: 13px;padding:.3rem 1rem;text-decoration: none ;
+          transition: transform 0.2s ease; box-shadow:2px 3px 0 #1a1209;}
+    .guide-btn:hover{ transform:translateY(-2px) ;box-shadow: 4PX 5PX 0 #1A1209;;}
