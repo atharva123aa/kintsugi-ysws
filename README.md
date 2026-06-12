@@ -23,6 +23,13 @@ It is a hack club YSWS in which you fix broken technical thing that feels annoyi
  IT CAN BE BUGGY IN ANDROID BUT WORK FINE IN DESKTOP
  I USED AI FOR SVG CRAFTINGS  AND IN DEPTH CSS AS I WAS A BEGGINER IN THAT AND MY ART SUCKS.YOU CAN TAKE IT AS 20 TO 30%.
  IT IS NOT COMPLETE BUT STILL 75% OF IT IS DONE.
+
+
+
+
+##Guide
+
+I added a guide section in which you can learn kintsugi repair it uses basic css and html with my main page theme.
  
  THEMED-
  I used pot svgs 
