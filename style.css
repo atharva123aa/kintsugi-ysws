@@ -45,9 +45,8 @@
      pointer-events:none;} .doodle {position:fixed; z-index:4; pointer-events: none;  opacity:.17;}
        .page {position:relative; z-index:10;
          width:100% ;
-        min-height:99vh; padding:6vh 5vw 8vh 5.8rem; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto auto  auto auto;  
-    
-    gap:2.2rem 4vw; align-items:start;}
+        min-height:99vh; padding:6vh 3vw 8vh 4rem; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto auto  auto auto;  gap:2.2rem 4vw; align-items:start; 
+    }
 /* sticky note*/ /*todo:add some more note*/ .sticky { grid-column:1; grid-row:1;  
     justify-self:start; align-self: end; 
      position:relative; max-width:  194px;   
@@ -122,18 +121,21 @@ transform:rotate(.4deg);}
      .faq-grid{grid-template-columns:1fr;}}
 .how-section{ grid-column:1/-1;
     grid-row:3;
-    padding:.4rem 0 .6rem;} .how-heading {font-family:'Caveat',cursive; font-size:clamp(1.5rem,3vw,2rem);
+    padding:0.4rem 0 0.6rem;; width:100%;margin-left:-2rem; 
+ margin-right: 0;} .how-heading {font-family:'Caveat',cursive; font-size:clamp(1.5rem,3vw,2rem);
         font-weight:698; color:#3d2a00; align-items:center; margin-bottom:.2rem; display:flex; flex-direction :column;
         align-items:center; gap:.2rem;} 
         .how-sub{font-size:.95rem;color:rgba(90,62,10,.45); font-style:italic; font-weight:400; 
         }
 
-        .how-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1.1rem;
-            margin-top:1.2rem;width:100%; min-width:0; box-sizing:border-box; } .how-card{
-                background:#2a1a08; border:2px dashed #c9a030;/*todo:add beter rms and vws for better mobile response and improve grid by changing layouts using fr*/
-border-radius:21px; padding:1.2rem 1rem 1rem;color:#f5e4b0; position:relative;
+        .how-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:0.6rem;
+            margin-top:1.2rem;width:100%;  } .how-card{
+                background:#2a1a08; border:2px dashed #c9a030;
+border-radius:21px; padding:1.4rem 1.2rem 1.2rem;color:#f5e4b0; position:relative;
 overflow:hidden;
-display:flex; flex-direction:column; gap:  .5rem; transition:transform .22s ease,box-shadow .22s ease;}
+display:flex; flex-direction:column; gap:  0.5rem; transition:transform 0.22s ease,box-shadow .22s ease;min-height:320px;
+/*1 53*/
+}
  .how-card:hover{transform:translateY(-4PX) ROTATE(.4DEG); BOX-SHADOW: 0 8PX 0 RGBA(26,18,9,.18);} .crack-svg{
     position:absolute; inset:0; width:100%;height:100%;pointer-events:none;}
     .how-card-title{font-family:'Caveat',cursive;
@@ -208,3 +210,9 @@ display:flex; flex-direction:column; gap:  .5rem; transition:transform .22s ease
         background:rgba(255,240,120,.65); border:1px solid #c8aa1e;}
     .maker-title{ font-size:1.2 ; font-weight:699; color:#5A3E0A; 
     }.maker-sub{font-size:0.96rem; color:#7a5a10; opacity:0.8;}
+    /*TODO ADD STYLE EVEN BETTER FRO THE RSVP 
+    Rsvp butn*/ .rsvp-btn{ position: fixed;top:13px; right:14px; 
+        z-index:201; display:block; line-height:0; } .rsvp-btn img{ height:46px; width:auto; 
+display:block; filter:drop-shadow(2px 3px 6px rgba(0,0,0,0.21)); transition :transform 0.2s ease,filter 0.2s ease;
+        } .rsvp-btn img:hover { transform:scale(1.06) 
+rotate(-1deg); filter:drop-shadow(3px 5px 10px rgba(0,0,0,0.25));} .rsvp-btn.clicked img{ filter: drop-shadow(0 0 12px rgba(212,160,23 ,0.9)) brightness(1.3); transform:scale(0.96); }
