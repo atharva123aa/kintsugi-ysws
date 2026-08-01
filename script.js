@@ -15,6 +15,28 @@ document.querySelectorAll('.faq-item' ).forEach(function(item) {
     },400);
 });
         
-
+const MOCK_EMAIL ="test@hackclcub.com";
+const EMAIL_RE= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;//no email expertise used gpt for these chars not the function
+document.getElementById('loginBtn').addEventListener('click', function(){
+    const val=document.getElementById('loginEmail').value.trim().toLowerCase() ;
+    this.classList.remove('ok','wrong');
+    if(!val){
+        this.classList.add('wrong')
+        this.innerHTML ="type smthg";
+    } else if(!EMAIL_RE.test(val)){
+        this.classList.add('wrong');
+        this.innerHTML="NOT an email";
+    } else if
+  (val!== MOCK_EMAIL){
+    this,classList.add('wrong');
+    this.innerHTML="not on list yet as of now";
+  } else{this.classList.add('ok');
+    this.innerHTML="YOU ARE IN";
+    return;
+  }
+  setTimeout(()=>{
+this.classList.remove('wrong');
+this.innerHTML ='start ! <span class="arrow"> →</span>';
+  }, 1200);});
         
      
