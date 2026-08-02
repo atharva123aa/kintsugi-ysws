@@ -15,7 +15,7 @@ document.querySelectorAll('.faq-item' ).forEach(function(item) {
     },400);
 });
         
-const MOCK_EMAIL ="test@hackclcub.com";
+const MOCK_EMAIL ="test@hackclub.com";
 const EMAIL_RE= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;//no email expertise used gpt for these chars not the function
 document.getElementById('loginBtn').addEventListener('click', function(){
     const val=document.getElementById('loginEmail').value.trim().toLowerCase() ;
@@ -28,10 +28,14 @@ document.getElementById('loginBtn').addEventListener('click', function(){
         this.innerHTML="NOT an email";
     } else if
   (val!== MOCK_EMAIL){
-    this,classList.add('wrong');
+    this.classList.add('wrong');
     this.innerHTML="not on list yet as of now";
   } else{this.classList.add('ok');
     this.innerHTML="YOU ARE IN";
+  setTimeout(()=>{
+    window.location.href ="dashboar.html";
+  },
+600);
     return;
   }
   setTimeout(()=>{
