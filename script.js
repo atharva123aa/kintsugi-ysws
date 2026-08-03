@@ -33,7 +33,7 @@ document.getElementById('loginBtn').addEventListener('click', function(){
   } else{this.classList.add('ok');
     this.innerHTML="YOU ARE IN";
   setTimeout(()=>{
-    window.location.href ="dashboar.html";
+    window.location.href ="dashboard.html";
   },
 600);
     return;
