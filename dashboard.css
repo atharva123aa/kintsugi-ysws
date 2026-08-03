@@ -1,0 +1,64 @@
+*{ box-sizing: border-box; 
+margin :0 ;padding: 0;}
+body{
+    font-family: 'Caveat',  cursive; background: #fdf0c2 ;min-height :100vh;;
+    display:flex;  
+background-image:repeating-linear-gradient( transparent 0px, 
+transparent 32px, rgba(200,160,60 ,0.35) 30px ,rgba(200,160,60,.35)
+31px ); background-size : 100% 32px
+;
+}.dash-sidebar{
+    width:97px ; flex-shrink: 0; background:#2a1a08; 
+border-right:2px dotted  #c9a030; padding:1.4rem 0; display:flex; flex-direction:column ;
+ align-items: center; gap :.7rem; position: sticky;  top :0; height:99.9999vh;} 
+ .dash-logo{
+font-family: 'Rubik Wet Paint', fantasy; /*it should really align well with my svg*/
+color:#e8b84b ; font-size:1rem ;
+margin-bottom:.6rem ;
+ }
+ .dash-nav-item{width:63px; 
+display:flex; flex-direction: column; 
+align-items: center; gap:.3rem; padding:0.5rem 0; border-radius: 13px;
+color:#f5eb40;
+ text-decoration: none; 
+border:2px dashed transparent; transition : background .15s ease,
+border-color .15s ease;} .dash-nav-item:hover{background:#3d2a08;
+border-color :#8a6a18 ;} 
+.dash-nav-item.active{background:#3d2a08; border-color :#d4a017; color:#d4a017;} 
+.dash-nav-icon {width:22px; height:22px ;
+display: block;}
+.dash-nav-icon  svg{
+width:100%; 
+height: 100% ;
+fill:none ;
+stroke:currentColor ;
+stroke-width: 1.8 ;  stroke-linecap :round; stroke-linejoin :round ;
+}.dash-nav-label{font-size:.72rem; font-family:'Caveat', cursive;
+opacity:.86;} 
+.dash-sidebar-footer{margin-top :Auto;
+display:flex ; flex-direction: column
+;align-items: center; gap:.5rem;
+border-top:1px dashed #6b552a; padding-top :.8rem;
+ width:100%;} .dash-hours{font-size: 1rem; color:#f5eb40 ;}
+ .dash-avatar{
+width: 38px; height:37px ; 
+border-radius :50% ; background:#d4a017 ; border :2px solid #1a1209; display: flex  ;align-items :center; 
+justify-content :center; font-family :'Caveat', cursive; font-weight:698 ;
+color:#1a1209 ; }.dash-logout{font-size:.85rem ;
+    color:rgba(245,228,176,.6 ); text-decoration: none;
+    font-family:'Caveat', cursive ;
+            } .dash-logout:hover{
+                color:#d4a017;
+            }.dash-main{
+            flex:1;padding:2.4rem 3vw;
+            }
+.dash-title{font-family:'Caveat', cursive; 
+font-weight :700; font-size: 2.4rem;
+color:#3d2a00 ; margin-bottom :.3rem;}
+.dash-sub{
+    font-size:1.05rem;  color :rgba(90,62,10,.5); 
+    font-style: italic; margin-bottom:2rem;
+} .dash-empty{border:2px dashed #c9a030; border-radius: 20px; min-height:319px; 
+display:flex; align-items: center; justify-content:center ;
+color:rgba(90,62,10,.5); font-size:  1.2rem ; font-style: italic;background:rgba(255,255,255,.15);} /*todo smthg for mobile screen*/
+    
