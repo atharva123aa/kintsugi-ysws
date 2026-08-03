@@ -6,17 +6,18 @@
     
     
     </head> 
-    <body><div class ="sidebar">
+    <body><div class ="dash-sidebar">
         <div class="dash-logo">金継ぎ</div>
 
 
-<a href ="#" class="dash-nav-item-active">
+<a href ="#" class="dash-nav-item active">
     <span class="dash-nav-icon"><svg viewBox="0 0 24 24">
 <path d="M3 11L12 3L21 11"/> <PATH D="M5  10V20H19V10"/>
-<PATH  D="M10 20V1H14V20 "/></svg>
+<PATH  D="M10 20V14H14V20 "/></svg>
     </span>
     <span class ="dash-nav-label">HOME</span></a> 
-    <A HREF="#" CLASS="dash-nav-icon">
+    <A HREF="#" CLASS="dash-nav-item">
+        <span class="dash-nav-icon">
 <svg viewBox= "0 0 24 24">
     <path  d="M6 8H18L19 21H5L6 8Z"/>
     <PATH D=" M9 8VC69 4 10.5 3 12 3C13.5 3 15 4 15  6V8"/>
@@ -46,8 +47,8 @@
 <A HREF ="#" CLASS="dash-nav-item">
 
     <span class="dash-nav-icon">
-        <svg viewbox ="0 0 24  24"><path d="M7  9C6 12 6.5 16 9 19C10.5 21 13.5 21 15 19C17.5  16 18 22 19 9Z"></path> <PATH D=
-        "M7 9C7 7.5 9 6.5 12 6.5C15 6.5 17 7.5 17 9"/><PATH D="M9.5  13L11 15L13 12L14.5"/></svg>
+        <svg viewbox ="0 0 24  24"><path d="M7 9C6 12 6.5 16 9 19C10.5 21 13.5 21 15 19C17.5  16 18 12 17 9Z"></path> <PATH D=
+        "M7 9C7 7.5 9 6.5 12 6.5C15 6.5 17 7.5 17 9"/><PATH D="M9.5  13L11 15L13 12L14.5 14"/></svg>
     </span>
     <span class="dash-nav-label">EXCHANGE</span>
 </A>
@@ -56,7 +57,34 @@
 class="dash-logout"> LOG OUT </a>
 
 </div>
+</div>
 <DIV CLASS="dash-main">
+    <div class="hour-progress" id="hourProgress">
+        <div class="hp-label" > <span id="hpHoursText">0 hrs logged</span>
+            <span class ="hp-stage-text" id="hpStageText" 
+            id="hpStageText">STAGE 1</span>
+<!--ADD DIFERNET COLOR FOR EACH STAGE -->
+</div>
+<DIV CLASS="hp-track">
+    <div class="hp-seg" data-cap="20" >
+        <div class ="hp-fill" id="hpFill1"></div>
+    </div>
+ <div class="hp-seg" data-cap="10">
+    <div class="hp-fill" id="hpFill2"></div>
+ </div>   
+ <div class="hp-seg" data-cap="20">
+<div class  ="hp-fill"id="hpFill3"></div>
+ </div>
+</DIV><DIV CLASS="hp-markers">
+
+    <span>0</span><span>20</span><span>30</span><span>50</span>
+
+
+</DIV>
+
+
+
+    </div>
 
     <div class="dash-title">WELCOME BACK</div>
     <DIV CLASS="dash-sub">NOTHING HERE YET-PICK SECTION</DIV>
