@@ -9,7 +9,7 @@ transparent 32px, rgba(200,160,60 ,0.35) 30px ,rgba(200,160,60,.35)
 ;
 }.dash-sidebar{
     width:97px ; flex-shrink: 0; background:#2a1a08; 
-border-right:2px dotted  #c9a030; padding:1.4rem 0; display:flex; flex-direction:column ;
+border-right:2px dashed  #c9a030; padding:1.4rem 0; display:flex; flex-direction:column ;
  align-items: center; gap :.7rem; position: sticky;  top :0; height:99.9999vh;} 
  .dash-logo{
 font-family: 'Rubik Wet Paint', fantasy; /*it should really align well with my svg*/
@@ -19,7 +19,7 @@ margin-bottom:.6rem ;
  .dash-nav-item{width:63px; 
 display:flex; flex-direction: column; 
 align-items: center; gap:.3rem; padding:0.5rem 0; border-radius: 13px;
-color:#f5eb40;
+color:#f5e4b0;
  text-decoration: none; 
 border:2px dashed transparent; transition : background .15s ease,
 border-color .15s ease;} .dash-nav-item:hover{background:#3d2a08;
@@ -52,6 +52,27 @@ color:#1a1209 ; }.dash-logout{font-size:.85rem ;
             }.dash-main{
             flex:1;padding:2.4rem 3vw;
             }
+    .hour-progress{background: #2a1a08; border:2px dashed #c9a030; border-radius:17px ;
+    padding: 1rem 1.2rem;  
+margin-bottom :1.6rem;}.hp-label{
+    display:flex; justify-content:space-between; align-items :baseline;
+    font-family: 'Caveat', cursive ; color:#f5eb40; 
+    font-size: 1.6rem; 
+    margin-bottom :.6rem;
+}.hp-stage-text{color:#d4a017;
+font-size:.96rem ;}.hp-track{
+    display:flex; gap: 4px; height:16px; 
+}.hp-seg{flex:1 ;
+background:#3a2c10;
+border: 1px solid #6b552a ;border-radius:8px;
+overflow: hidden; position: relative;}.hp-fill{height:100%; width:0%; 
+background: linear-gradient(90deg, #c9a030 ,#f0c14d,
+#d4a017 );
+transition:width 0.6s ease;}
+.hp-markers{ display :flex; 
+justify-content: space-between; 
+font-size:.76rem ; color:rgba(245,228,176,.6 ); margin-top: .36rem; 
+font-family: 'Caveat',cursive;}
 .dash-title{font-family:'Caveat', cursive; 
 font-weight :700; font-size: 2.4rem;
 color:#3d2a00 ; margin-bottom :.3rem;}
