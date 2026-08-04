@@ -91,4 +91,25 @@ class="dash-logout"> LOG OUT </a>
     <DIV CLASS="dash-empty">NO</DIV>
 </DIV>
 
-    </div></body></html>
+    </div><script>
+    const MOCK_HOURS=12;
+function uhb(hours){
+const caps=[20,10,20];// it is a bit uneven like 20 10 20 but 60 hour was very much 
+let remaining=hours;
+const fillIds=['hpFill1', 'hpFill2','hpFill3'];
+caps.forEach ((cap, i)=>{const used=Math.max(0, 
+    Math.min(remaining,cap)
+);
+const pct =(used/ cap)*100; 
+document.getElementById(fillIds[i]).style.width =pct +'%';
+remaining -= used;
+});
+document.getElementById('hpHoursText').textContent= hours+'hrs logged';
+ let stage=1;
+ if (hours>=20 && hours< 30) stage=2;
+ else if (hours>=30) 
+ stage=3;
+document.getElementById('hpStageText').textContent='Stage'+stage;
+}
+uhb(MOCK_HOURS)
+    </script></body></html>
