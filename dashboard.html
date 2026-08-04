@@ -89,9 +89,20 @@ class="dash-logout"> LOG OUT </a>
     <div class="dash-title">WELCOME BACK</div>
     <DIV CLASS="dash-sub">NOTHING HERE YET-PICK SECTION</DIV>
     <DIV CLASS="dash-empty">NO</DIV>
-</DIV>
 
-    </div><script>
+<DIV CLASS ="dash-bottom-row"> 
+<div class ="status-card" id="eligibilityCard">
+<div  class="s-card-title">YSWS ELIGIBILITY</div>
+<DIV CLASS="s-card-value" id="eligibilityValue">Wait..</DIV>
+
+
+</DIV>
+<div class="status-card">
+    <div class="s-card-title">DOCS AND GUIDES </div>
+    <DIV CLASS ="s-card-value s-card-link">PLEASE READ GUIDE !</DIV>
+</div>
+
+    </div></DIV><script>//some mock test
     const MOCK_HOURS=12;
 function uhb(hours){
 const caps=[20,10,20];// it is a bit uneven like 20 10 20 but 60 hour was very much 
@@ -111,5 +122,11 @@ document.getElementById('hpHoursText').textContent= hours+'hrs logged';
  stage=3;
 document.getElementById('hpStageText').textContent='Stage'+stage;
 }
-uhb(MOCK_HOURS)
+uhb(MOCK_HOURS);
+const MOCK_ELIGIBLE =true; // false for the same
+function updateEligibility(isEligible){const el=document.getElementById('eligibilityValue');
+el.textContent =isEligible ?'Eligible' :'NOT LEGAL';
+el.classList.add(isEligible ?'eligible': 'ineligible');
+}
+updateEligibility(MOCK_ELIGIBLE);
     </script></body></html>
