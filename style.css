@@ -144,7 +144,34 @@ transform:rotate(.4deg);}
 max-width:653px ; margin: .3rem 0  1.6rem ; 
 display: flex; 
 flex-direction: column; align-items: center ;
-}.login-bar{
+}
+
+.mini-signup{width: 100%; max-width:  417px;  position:relative ; background:#2a1a08; 
+border:2px dashed #c9a030; border-radius :18px; 
+padding:1.4rem 1.4rem 1.6rem; margin:2.5rem auto 1rem; box-shadow :3px 5px 0 rgba(26,18,9,.18);} .mini-signup-title{font-family :'Caveat', cursive; font-weight: 700; 
+font-size :1.5rem; color:#f0c14d; margin-bottom :.8rem;}
+.mini-signup-input{width:100% ;background :#3a3128; 
+border: 1px solid #6b552a; border-radius :10px; padding:.7rem 1rem;
+font-family:'Caveat',cursive;
+font-size:1.15rem ; color:#f5e4b0; outline :none; 
+margin-bottom:.8rem;}
+.mini-signup-input::placeholder {color :rgba(245,228,175,.4); 
+}.mini-signup-btn{width:100% ; padding:.7rem 0; background :#e8dfa0; 
+border  :2px solid #1a1209; 
+border-radius :10px; 
+color:#2a1a08; font-family :'Caveat', cursive;  font-weight :700; font-size:1.16rem; 
+cursor:pointer; transition: transform .15s ease; 
+margin-bottom :1rem;}.mini-signup-btn:hover{transform:translateY(-2px);}.mini-signup-note {
+    font-family :'Caveat', cursive;  font-size :.95rem; line-height:1.46; 
+    color:rgba(245,228,176,.65) ;
+}
+
+
+
+
+
+
+.login-bar{
 display:flex; 
 width: 100%; background :#2a1a08;  
   border:2px dashed #c9a030;
