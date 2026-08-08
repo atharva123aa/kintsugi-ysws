@@ -1,3 +1,6 @@
+
+
+
 <html><head>
     <meta charset="UTF-8">  <META NAME="viewport" content="width= device-width, initial-scale =1.0"><!--team told me to make it mob friendle-->
         <title>dash-kintsugi</title>
@@ -10,13 +13,14 @@
         <div class="dash-logo">金継ぎ</div>
 
 
-<a href ="#" class="dash-nav-item active">
+<a href ="#" class="dash-nav-item active" 
+data-section ="home">
     <span class="dash-nav-icon"><svg viewBox="0 0 24 24">
 <path d="M3 11L12 3L21 11"/> <PATH D="M5  10V20H19V10"/>
 <PATH  D="M10 20V14H14V20 "/></svg>
     </span>
     <span class ="dash-nav-label">HOME</span></a> 
-    <A HREF="#" CLASS="dash-nav-item">
+    <A HREF="#" CLASS="dash-nav-item" data-section="shop">
         <span class="dash-nav-icon">
 <svg viewBox= "0 0 24 24">
     <path  d="M6 8H18L19 21H5L6 8Z"/>
@@ -59,6 +63,7 @@ class="dash-logout"> LOG OUT </a>
 </div>
 </div>
 <DIV CLASS="dash-main">
+<div id="section-home">
     <div class="hour-progress" id="hourProgress">
         <div class="hp-label" > <span id="hpHoursText">0 hrs logged</span>
             <span class ="hp-stage-text" id="hpStageText" 
@@ -102,7 +107,55 @@ class="dash-logout"> LOG OUT </a>
     <DIV CLASS ="s-card-value s-card-link">PLEASE READ GUIDE !</DIV>
 </div>
 
-    </div></DIV><script>//some mock test
+    </div></DIV>
+ <div id="section-shop" style="display:none;">
+<div class ="shop-header">
+<div class="shop-title">Trade</div>
+<div class="shop-header-actions" >
+<button class="shop-btn-outline">Currency info</button>
+<button class ="shop-btn-filled">My orders</button>
+
+</div>
+</div><div class="currency-bar"><div class="currency-item">
+
+    <svg class="currency-icon"  viewBox="0 0 40  40"><ellipse cx="20" cy="30" rx="14" ry="5" fill="rgba(212,160,23,.2)"/><path d="M8 18Q6 26 10 31Q15 36 20 36Q25 36 30 31Q34 26 32 18Z" fill="#d4a017" stroke="#a07010" stroke-width="1.4"/><path d="M8 18Q14 14 20 14Q26 14 32 18" fill="#e8c14d" stroke="#b48c28" stroke-width="1.2"/>
+</svg><div class="currency-info"><span class="currency-label">Silver pot</span><Span class="currency-count">0</Span></div>
+    
+
+</div>
+<div class="currency-item">
+    <svg class="currency-icon" viewBox="0 0 40 40"><ellipse cx="20" cy="30" rx="14" ry="5" fill="rgba(200,130,50,.18)"/><path d="M8 18Q6 26 10 31Q15 36 20 36Q25 36 30 31Q34 26 32 18Z" fill="#c87832" stroke="#3d2008" stroke-width="1.4"/><path d="M8 18Q14 14 20 14Q26 14 32 18" fill="#e09040" stroke="#3d2008" stroke-width="1.2"/></svg><div class="currency-info"><span class="currency-label">Bronze pot</span>
+    <Span class ="currency-count">0</Span>
+</div>
+<div class="currency-item"><svg  class="currency-icon" viewBox="0 0 40 40"><ellipse cx="20" cy="30" rx="14" ry="5" fill="rgba(212,160,23,.2)"/><path d="M8 18Q6 26 10 31Q15 36 20 36Q25 36 30 31Q34 26 32 18Z" fill="#d4a017" stroke="#a07010" stroke-width="1.4"/><path d="M8 18Q14 14 20 14Q26 14 32 18" fill="#e8c14d" stroke="#b48c28" stroke-width="1.2"/></svg>
+<div class="currency-info"><span class ="currency-label">Gold pot</span><span class="currency-count">0</span></div>
+</div>
+
+</div>
+<div class="region-filter">
+<button class="region-chip active" data-region="all">All regions</button>
+<button class = "region-chip"data-region="AMERICAS"></button>
+<button class = "region-chip"data-region="ASIA"></button>
+<button class = "region-chip"data-region="EUROPE"></button>
+<button class = "region-chip"data-region="AFRICA"></button>
+<button class = "region-chip"data-region="OCEANIA"></button>
+<button class = "region-chip"data-region="ANTARCTICA/SPACE"></button>
+
+
+</div>
+<DIV CLASS="shop-empty">No items yet-check channel for updates</DIV>
+
+
+ </div>   
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    <script>//some mock test
     const MOCK_HOURS=12;
 function uhb(hours){
 const caps=[20,10,20];// it is a bit uneven like 20 10 20 but 60 hour was very much 
@@ -129,4 +182,23 @@ el.textContent =isEligible ?'Eligible' :'NOT LEGAL';
 el.classList.add(isEligible ?'eligible': 'ineligible');
 }
 updateEligibility(MOCK_ELIGIBLE);
+
+document.querySelectorAll('.dash-nav-item[data-section]').forEach(function(item){
+    item.addEventListener('click' ,function(e){e.preventDefault();
+        document.querySelectorAll('.dash-nav-item[data-section]').forEach(function(i){ 
+            i.classList.remove('active');
+        }); 
+    this.classList.add('active'); document.querySelectorAll('#section-home,#section-shop').forEach(
+        function(s){s.style.display ='none' ;}
+     );document.getElementById('section-' +this.dataset.section).style.display ='block';
+});});
+document.querySelectorAll('.region-chip').forEach(function(chip){
+    chip.addEventListener('click' ,function (){
+        document.querySelectorAll('.region-chip').forEach(function(c){
+            c.classList.remove('active') ;
+        });
+         this.classList.add('active');
+    });
+});
+
     </script></body></html>
