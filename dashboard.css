@@ -99,3 +99,55 @@ font-size:1.36rem; font-weight: 700;}
 .s-card-link{color:#d4a017;
 cursor:pointer;}.s-card-link:hover{color:#f0c14d;}
 @media(max-width: 600px){.dash-bottom-row{grid-template-columns: 1fr;}}
+
+.shop-header{display :flex; justify-content :space-between ; 
+align-items:Center; margin-bottom :1.2rem;}.shop-title{font-family :georgia,'Times New Roman',serif ; /*used alt as the text would be unclear in this much of space*/
+    font-weight:699; font-size :2rem ;color :#3d2a00; 
+    letter-spacing: .5px;
+
+}
+.shop-header-actions{display:flex; gap: .6rem; }
+.shop-btn-outline{background:transparent;
+border: 2px dashed #c9a030; 
+color: #6b4a10; font-family :'Caveat' ,cursive ;font-weight:701; 
+font-size  :.96rem ; padding :.5rem 1rem;border-radius: 12px; cursor:pointer ;}
+.shop-btn-filled{background :#2a1a08;
+border :2.1px solid #1a1209; color :#f0c14d; font-family :'Caveat',cursive ; font-weight :700; 
+font-size :.95rem; padding :.5rem 1rem ;
+border-radius:12px; cursor:pointer;}
+.shop-btn-filled:hover{background :#3d2a08 ;
+}
+.currency-bar{display :flex; background:#2a1a08;
+border :2px  solid #d4a017; border-radius:18px; padding:1rem 1.4rem;  
+margin-bottom :1..6rem;
+box-shadow : 0 0 20px rgba(212,160, 23,.12); }
+.currency-item{flex :1; 
+display :flex ;align-items :center ;
+gap :.7rem; padding :0 1rem ;
+border-right :1px dashed rgba(212,160, 23,.2);}.currency-item:last-child{border-right :none ;} 
+.currency-icon{width :34px; 
+                    HEIGHT:34PX;
+                FLEX-SHRINK :0;}
+.currency-info{display :flex; flex-direction :column; }
+.currency-label{font-family:'Caveat', cursive; font-size :.86rem;  
+color:rgba(245,228,176,.6 );
+letter-spacing :.5px; text-transform : uppercase ;}
+.currency-count{
+    font-family :Georgia,serif ;
+    font-weight:702 ; font-size :1.5rem; 
+color :#f5e4b0;
+}.region-filter{
+display: flex; flex-wrap:wrap ; gap:.6rem; margin-bottom:1.6rem ;}
+.region-chip{background: transparent;; border:2px dashed #c9a030;  color:#6b4a10; font-family :'Caveat', cursive ; font-weight :700 ;
+font-size:.9rem;
+padding :.45rem 1.1rem ; border-radius :20px; cursor : pointer;
+transition :background .15s ease, color .15s ease;}.region-chip:hover{background :rgba(212,160, 23,.12);}
+.region-chip.active
+{background  :#d4a018; border-color :#a07010; color :#1e1200;}
+
+
+.shop-empty{border:2px dashed #c9a030;
+border-radius :20px; min-height :220px; display: flex; align-items:center ; justify-content :center;
+color:rgba(90,62,10,.5); 
+font-family :'Caveat',cursive; font-size :1.2rem; 
+font-style :italic; background: rgba(255,255,255,.15);}
