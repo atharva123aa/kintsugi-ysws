@@ -340,6 +340,37 @@ transform :rotate(0.5deg);
          border-radius: 13px;padding:.3rem 1rem;text-decoration: none ;
           transition: transform 0.2s ease; box-shadow:2px 3px 0 #1a1209;}
     .guide-btn:hover{ transform:translateY(-2px) ;box-shadow: 4PX 5PX 0 #1A1209;;}
+
+
+.site-footer{
+grid-column:1/-1; padding:2.4rem 1rem 1rem; 
+border-top :2px dashed #c9A030; margin-top :1rem;
+}.footer-top{
+    font-family: 'Caveat',cursive; font-weight: 698; font-size :1.610100rem; color :#3d2a00; margin-bottom :.8rem;
+}.footer-brand{
+    color :#d4a019; text-decoration: underline ;
+}.footer-brand:hover{color :#f0c14d;}.footer-blurb{
+    font-family :'Caveat', cursive; 
+    font-size :1.05rem;  color :#6b4a10; line-height:1.56; max-width :641px; max-width :640px; 
+margin-bottom :2rem
+;
+}.footer-shipping{color :#c9863a; font-weight:700 ;}
+.footer-cols{
+display :grid; 
+grid-template-columns: repeat(3,1fr); gap:2rem ;
+margin-bottom :2rem;
+} .footer-col-title{
+    font-family: 'Caveat',cursive; font-weight: 698; font-size :1.610100rem;  margin-bottom :.8rem;
+} .footer-col a {display: block; font-family :'Caveat', cursive;
+font-size :1rem; color :#6b4a10 ; text-decoration :none; opacity :.75; 
+margin-bottom :.5rem;} .footer-col a:hover{opacity: 1; color :#a06a00;}.footer-bottom{ font-family:'Caveat',cursive;
+font-size : .9rem; color :RGBA(90,62,10,.54); font-style :italic ;
+
+
+}
+@media(max-width :600px){.footer-cols{grid-template-columns: 1fr; gap:1.4rem;}}
+
+
 .tier-card:has(.tier-label[style*="HACKATHON TICKET"]){
     background:linear-gradient(135deg,#1e1200 0%,#2a1c05
     40% ,#1a1100 100% ); border-color :#f0c14d;  BOX-SHADOW:0 0 26PX RGBA(240,193,77,.28), inset 0 1px 0 rgba(255,240,190,.08);  position:relative ; overflow: hidden;
