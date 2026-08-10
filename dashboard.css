@@ -143,7 +143,7 @@ font-size:.9rem;
 padding :.45rem 1.1rem ; border-radius :20px; cursor : pointer;
 transition :background .15s ease, color .15s ease;}.region-chip:hover{background :rgba(212,160, 23,.12);}
 .region-chip.active
-{background  :#d4a018; border-color :#a07010; color :#1e1200;}
+{background  :#d4a017; border-color :#a07010; color :#1e1200;}
 
 
 .shop-empty{border:2px dashed #c9a030;
@@ -151,3 +151,73 @@ border-radius :20px; min-height :220px; display: flex; align-items:center ; just
 color:rgba(90,62,10,.5); 
 font-family :'Caveat',cursive; font-size :1.2rem; 
 font-style :italic; background: rgba(255,255,255,.15);}
+.shop-section-heading{font-family:'Caveat',cursive;
+font-weight:698; 
+font-size :1.5rem; color :#3d2a00; margin-bottom :1rem;}
+.shop-grid{display :grid; grid-template-columns :repeat(auto-fill ,minmax(220px, 1fr));
+gap:1.000000rem; margin-bottom:1.6rem;}.shop-item-card{background: #2a1a08; border:2px dashed #c9a030 ;
+border-radius :16px; padding: 1.1rem 1.2rem; cursor :pointer; transition :transform .15s ease, border-color .15s ease;} .shop-item-card:hover{transform :translateY(-3px);
+border-color :#d4a017;}.shop-item-card.gold{background: #1e1200;
+border-color :#d4a017;
+box-shadow :0 0 18px rgba(212,160, 23,.18);}
+.shop-item-img {width :100%;
+height : 110px; border-radius:10px; 
+overflow: hidden;
+margin-bottom: .7rem;background: #3a2c10 ;
+display:flex; align-items:center;
+justify-content: center ;}.shop-item-img {width :100%; height :100%; 
+object-fit: cover; display :block;} .shop-item-img-empty
+{color:rgba(245,228,176,.35 ) ; 
+font-family: 'Caveat',
+cursive; font-style: italic; font-size :.9rem;}
+.shop-item-tag{display :inline-block; 
+background:#3d2a08;
+border :1px solid #8a6a18; color:#c9a030;font-family: 'Caveat' ,cursive;
+font-size :.76rem;  text-transform: uppercase;
+letter-spacing :.5px;
+padding: 2px 9px; border-radius: 13px;
+margin-bottom :.5rem;
+}.shop-item-title{
+    font-family: georgia ,serif; /*gonna use the same font as caveat is too styly*/font-weight :701;
+    font-size: 1.16rem; color:#f5e4b0 ;
+margin-bottom :.3rem;
+} .shop-item-cost{font-family :'Caveat', cursive; 
+font-weight: 699; color :#d4a017; font-size: 1rem;}
+/*using i modal so i will make it reusable so i just have to write info in html and style auto happens*/ .i-m-b{
+    display :none; position:fixed; inset:0;background :rgba(20,13,2,.6); z-index: 500; align-items :center; justify-content: center;
+}.i-m-b.open{display :flex;}.i-m{background :#1e1200; border :2px solid #d4a017; border-radius :21px; padding :2rem;width:91% ; max-width :442px; position :relative;    box-shadow  :0 0 30px rgba(212,160,23,.2);}
+.i-m-close{position :absolute; top :1rem; right :1rem; 
+background:transparent; border:none; color :#f5e4b0;
+ font-size: 1.2rem;
+cursor :pointer;}
+.i-m-img{width:100%; height: 160px; border-radius :13px; overflow : hidden; 
+margin-bottom: 1.000rem; background: #2a1a08;
+display: flex; align-items: center;; justify-content: center;
+}
+.i-m-img img{width: 100%;height: 100% ;
+object-fit: cover;
+display :block;}.i-m-img-empty {color:rgba(245,228,176,.35 ); font-family: 'Caveat', cursive ;
+font-style: italic
+;}
+.i-m-tag{display: inline-block ;
+background: #3d2a08; border:1px solid  #8a6a18;color: #c9a030 ;
+font-family :'Caveat' ,cursive; font-size :.8rem; padding:3px 11px; border-radius :14px; margin-bottom :.8rem;}
+
+.i-m-regions{display :Flex; flex-wrap:wrap;
+gap:.4rem; margin-bottom: 1rem;} .i-m-regions span{background:transparent; border:1px solid #6b552a; color :#c9a030 ; font-family:'Caveat' ,cursive; font-size:.8rem; padding :3px 10px; border-radius: 14px;}.i-m-desc{font-family :'Caveat', cursive;font-size :1.09rem; color :#f5e4b0;
+line-height :1.6; margin-bottom :1.2rem;}.i-m-balance{background:#2a1a08; border :1px solid #6b552a; border-radius :10px ; padding: .7rem 1rem; 
+font-family :'Caveat', cursive;color:#f5e4b0;
+margin-bottom: 1.2rem;}
+.i-m-balance b{color :#f5e4b0;}.i-m-qty{display :flex;
+align-items: center;  gap: .8rem;
+font-family :'Caveat',cursive; color:#f5e4b0;
+margin-bottom :1.2rem;}.i-m-qty button{width:32px;
+height :32px; border-radius :8px; 
+background :#2a1a08; border:1px solid #6b552a; color:#f5e4b0;
+font-size :1.1rem; cursor :pointer;
+} .i-m-buy {width :100%;
+padding :.8rem 0; background :#3d2a08; 
+border:2px solid  #6b552a; 
+border-radius :12px ; color:rgba(245,228,176,.6 ); font-family :'Caveat',  cursive; font-weight:700; font-size:1.05rem; cursor:not-allowed;}.i-m-buy.enabled{
+    background:#e8dfa0; border-color :#1a1209; color :#2a1a08; cursor :pointer;
+}
