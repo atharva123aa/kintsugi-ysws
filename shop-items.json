@@ -1,0 +1,13 @@
+[{
+    "id":"ticket",
+    "tag":"Ticket",
+    "gold":true,
+    "title":"Kintsugi ticket",
+    "sub":"Japan would be so lit!",
+    "regions":[
+        "ALL"
+    ] ,
+    "desc":"You need this to attend the hackathon in Tokyo",
+    "cost" :50
+
+}]
