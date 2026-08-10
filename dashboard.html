@@ -1,4 +1,4 @@
-<html><head>
+    <html><head>
     <meta charset="UTF-8">  <META NAME="viewport" content="width= device-width, initial-scale =1.0"><!--team told me to make it mob friendle-->
         <title>dash-kintsugi</title>
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
@@ -63,8 +63,7 @@ class="dash-logout"> LOG OUT </a>
 <div id="section-home">
     <div class="hour-progress" id="hourProgress">
         <div class="hp-label" > <span id="hpHoursText">0 hrs logged</span>
-            <span class ="hp-stage-text" id="hpStageText" 
-            id="hpStageText">STAGE 1</span>
+            <span class ="hp-stage-text"id="hpStageText">STAGE 1</span>
 <!--ADD DIFERNET COLOR FOR EACH STAGE -->
 </div>
 <DIV CLASS="hp-track">
@@ -130,10 +129,32 @@ class="dash-logout"> LOG OUT </a>
 </div>
 
 </div>
+<div class="shop-section-heading">Event Shop</div><div class="shop-grid" id="shopGrid"></div>
+<div class="i-m-b" id="imb">
+    <div class="i-m">
+        <button class="i-m-close" id="imclose">X</button><div class="i-m-img" id="mimg"></div><div class="i-m-tag"
+        id="mtag"></div>
+         <div class="i-m-title" id="mtitle"></div> <div class="i-m-sub" id="msub"></div> <div class="i-m-regions" id="mregions"></div> <div class="i-m-desc" id="mdesc"></div>
+     <div class="i-m-balance">Your Balance: <b id="mbalance">0 pots</b></div>
+    <div class="i-m-qty">
+<Span>Qty</Span>
+<button id="qtyMinus">-</button><Span id="qtyValue">1</Span>
+<button id="qtyPlus">+</button>
+    </div>
+    <BUTTON CLASS="i-m-buy" id="mBuyBtn">INSUFFICIENT BALANCE</BUTTON>
+</div></div>
 <div class="region-filter">
+    
+
+
+
+    
+
+
+
 <button class="region-chip active" data-region="all">All regions</button>
 
-<button class = "region-chip"data-region="AMERICAS">North and South America</button><button class = "region-chip"data-region="INDIAS">India</button>
+<button class = "region-chip"data-region="AMERICAS">North and South America</button><button class = "region-chip"data-region="INDIA">India</button>
 <button class = "region-chip"data-region="ASIA">Asia</button>
 <button class = "region-chip"data-region="EUROPE">Europe</button>
 <button class = "region-chip"data-region="AFRICA">Africa</button>
@@ -191,12 +212,99 @@ document.querySelectorAll('.dash-nav-item[data-section]').forEach(function(item)
         function(s){s.style.display ='none' ;}
      );document.getElementById('section-' +this.dataset.section).style.display ='block';
 });});
+
+let SHOP_ITEMS=[{
+    "id": "ticket",
+        "tag": "Ticket",
+        "gold": true,
+        "title": "Kintsugi Ticket",
+        "sub": "50 pots · admits you to the hackathon",
+        "regions": ["ALL"],
+        "desc": "You need this to attend the Kintsugi Hackathon in Japan.",
+        "cost": 50,
+        "image" :""
+}];
+const MOCK_POTS= 0;
+
+function renderShop(){
+    const grid = document.getElementById('shopGrid');
+    grid.innerHTML = '';
+    SHOP_ITEMS.forEach(function(item){
+        const card = document.createElement('div');
+        card.className = 'shop-item-card' + (item.gold ? ' gold' : '');
+        card.dataset.regions = item.regions.join(',');
+        card.innerHTML =
+        (item.image? '<div class ="shop-item-img"><img src="'+ item.image + ' "alt ="'+ item.title+ '"></div>':
+            '<div class= "shop-item-img shop-item-img-empty">IDK </DIV>')+
+        
+            '<div class="shop-item-tag">' + item.tag + '</div>' +
+            '<div class="shop-item-title">' + item.title + '</div>' +
+            '<div class="shop-item-cost">' + item.cost + ' silver pots</div>';
+        card.addEventListener('click', function(){ openItemModal(item); });
+        grid.appendChild(card);
+    });
+}
+
+function openItemModal(item){
+    const imgEL= document.getElementById('mimg'); if(item.image){
+        imgEL.innerHTML='<img  src="'+ item.image +'" alt="'+ item.title +'">';} else{
+imgEL.innerHTML= ' <div class= "i-m-img-empty">idk</div>';
+        }
+    document.getElementById('mtag').textContent = item.tag;
+    document.getElementById('mtitle').textContent = item.title;
+    document.getElementById('msub').textContent = item.sub;
+    document.getElementById('mdesc').textContent = item.desc;
+    document.getElementById('mbalance').textContent = MOCK_POTS + ' silver pots';
+
+    const regionsEl = document.getElementById('mregions');
+    regionsEl.innerHTML = '';
+    item.regions.forEach(function(r){
+        const span = document.createElement('span');
+        span.textContent = r === 'ALL' ? 'All Regions' : r;
+        regionsEl.appendChild(span);
+    });
+
+    let qty = 1;
+    document.getElementById('qtyValue').textContent = qty;
+    document.getElementById('qtyMinus').onclick = function(){ if(qty>1){ qty--; document.getElementById('qtyValue').textContent = qty; }};
+    document.getElementById('qtyPlus').onclick = function(){ qty++; document.getElementById('qtyValue').textContent = qty; };
+
+    const buyBtn = document.getElementById('mBuyBtn');
+    if (MOCK_POTS >= item.cost){
+        buyBtn.textContent = 'Buy for ' + item.cost + ' silver pots';
+        buyBtn.classList.add('enabled');
+    } else {
+        buyBtn.textContent = 'Insufficient balance';
+        buyBtn.classList.remove('enabled');
+    }
+
+    document.getElementById('imb').classList.add('open');
+
+}
+document.getElementById('imclose').addEventListener('click', function(){
+    document.getElementById('imb').classList.remove('open');
+});
+document.getElementById('imb').addEventListener('click', function(e){
+    if (e.target === this) this.classList.remove('open');
+});
+
+//fetch('shop-items.json')
+    //.then(function(res){ return res.json(); })
+   /* .then(function(data){
+        SHOP_ITEMS = data;
+        renderShop();
+    })
+    .catch(function(err){ console.error('couldnt load shop items', err); });*/
+renderShop();
 document.querySelectorAll('.region-chip').forEach(function(chip){
-    chip.addEventListener('click' ,function (){
-        document.querySelectorAll('.region-chip').forEach(function(c){
-            c.classList.remove('active') ;
+    chip.addEventListener('click', function(){
+        document.querySelectorAll('.region-chip').forEach(function(c){ c.classList.remove('active'); });
+        this.classList.add('active');
+        const region = this.dataset.region;
+        document.querySelectorAll('.shop-item-card').forEach(function(card){
+            const regions = card.dataset.regions.split(',');
+            card.style.display = (region === 'all' || regions.includes('ALL') || regions.includes(region)) ? 'block' : 'none';
         });
-         this.classList.add('active');
     });
 });
 
